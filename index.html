@@ -1,1 +1,81 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__body">
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <!-- меню под бургером -->
+            <div class="header__menu">
+                <ul class="header__list">
+                    <li>
+                        <a href="#about" class="header__link">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="header__link">Портфолио</a>
+                    </li>
+                    <li>
+                        <a href="#contacts" class="header__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <section id="about">
+            <div class="about-content">
+                <div class="hello-text">
+                    <p>Привет! Меня зовут Настя, я веб-разработчик</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            
+        </section>
+        <section id="contacts">
+            <div class="contacts-text">
+                <p>Если Вам нужна помощь в реализации Вашего веб-проекта или есть идеи для совместного сотрудничества, Вы можете связаться со мной через форму!</p>
+            </div>
+            <div class="form-container">
+                <form method="GET" target="#" action="https://api.telegram.org/bot5749049101:AAFc6ZVsFV9tRDaK8yWplqQ-8FMKs_n0VKA/sendMessage">
+                    <div>
+                        <input name="chat_id" type="hidden" value="224039891">
+                    </div>
+                    <div class="flex">
+                        <div class="form-wrapper">
+                            <div>
+                                <label for="typeYourName">Ваше имя</label><br>
+                                <input class="form-style" id="typeYourName" name="name" type="text" placeholder="Имя">
+                            </div>
+                            <div>
+                                <label for="typeYourEmail">Ваша почта</label><br>
+                                <input class="form-style" id="typeYourEmail" name="email" type="email" placeholder="email@mail.ru">
+                            </div>
+                        </div>
+                        <div class="message">
+                            <label for="message">Написать сообщение</label><br>
+                            <textarea class="form-style" id="message" name="message" placeholder="Введите сообщение" maxlength="5000"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="send-btn" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
