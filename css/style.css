@@ -496,7 +496,7 @@ label {
     margin-top: 10px;
 }
 
-#send-btn:hover {
+.send-btn:hover {
     background-color: rgb(225 213 254 / 45%);
     color: #000000;
     border-color: rgb(225 213 254 / 45%);
