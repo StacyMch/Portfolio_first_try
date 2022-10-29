@@ -75,6 +75,12 @@ ul {
     display: none;
 }
 
+@media (max-width: 1200px) {
+    .codes-wrapper {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 767px) {
     body.lock {
         overflow: hidden;
@@ -169,12 +175,41 @@ ul {
     }
 }
 
+@media (max-width: 533px) {
+    .form-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .message {
+        width: auto;
+    }
+
+    textarea.form-style {
+        width: fit-content;
+        justify-content: center;
+        width: auto;
+    }
+    .send-btn {
+        display: block;
+        text-align: center;
+    }
+}
+
 #about {
-    background-image: url('..//img/big.jpg');
-    background-size: cover;
     margin: 0;
-    width: 100%;
-    height: 700px;
+    width: 65%;
+    height: 650px;
+    background-image: url('..//img/horizontal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 50px 0;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .about-content {
@@ -189,22 +224,72 @@ h1 {
     font-size: 30px;
 }
 
-.hello-text {
-    background-color: rgba(222, 222, 222, 0.3);
-    color: beige;
+/* анимация приветствия */
+.center {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background: url(http://fillmurray.com/200/200);
+    background-size: 101%;
+    background-position: top left;
+    border-radius: 100%;
+    margin: 100px auto;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    box-shadow: 0px 5px 10px #000;
 }
-
-/* #photo {
-    width: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-} */
+.center:hover {
+box-shadow: 0px 5px 20px #000;
+background-size: 115%;
+}
+.center:hover .outside {
+transform: rotate(-45deg) translate(0px) rotate(-315deg);
+background: rgb(255, 179, 0, 0.7);
+width: 200px;
+letter-spacing: 10px;
+padding-left: 10px;
+line-height: 200px;
+height: 200px;
+margin-top: -100px;
+margin-left: -100px;
+transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+.center .outside {
+display: block;
+position: absolute;
+line-height: 100px;
+text-align: center;
+letter-spacing: 4px;
+padding-left: 4px;
+box-sizing: border-box;
+font-weight: 300;
+color: #fff;
+border-radius: 100%;
+width: 100px;
+height: 100px;
+background: rgb(12, 12, 87);
+left: 50%;
+top: 50%;
+margin-top: -50px;
+margin-left: -50px;
+transform: rotate(-135deg) translate(-100px) rotate(135deg);
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.center .outside span {
+letter-spacing: 0;
+}
 
 p {
     text-align: center;
     font-size: 25px;
     font-weight: bold
-    
+}
+
+.between {
+    height: 100px;
+    background-color: #fff;
 }
 
 #portfolio {
@@ -213,12 +298,141 @@ p {
     background-repeat: no-repeat;
 }
 
+.slider-text {
+    color: beige;
+    padding-top: 70px;
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+    max-width: 700px;
+    padding-bottom: 30px;
+}
+
+h5, .carousel-caption > p {
+    background-color: rgb(255 255 255 / 80%);
+    border-radius: 10px;
+    color: #443f3f;
+}
+
+.codes-wrapper {
+    padding: 30px;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+}
+
+h4 {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h4 > a {
+    text-decoration: none;
+    color: beige;
+}
+
+h4:hover > a {
+    color: rgba(255, 106, 0);
+}
+
+span {
+    font-weight: 500;
+}
+
+.codes-text {
+    color: beige;
+    /* background-color:rgba(255, 106, 0, 0.489); */
+    width: 400px;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.text-box {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.codes-text > p {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.codes-wrap {
+    
+}
+
+.watch-code {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 3%
+}
+
+/* анимация кнопки с кодом */
+.btn:link, .btn:visited {
+text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.2s;
+}
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+transform: translateY(-1px);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+background-color: #fff;
+color: #777;
+}
+.btn::after {
+content: "";
+display: inline-block;
+height: 100%;
+width: 100%;
+border-radius: 100px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+transition: all 0.4s;
+}
+.btn-white::after {
+background-color: #fff;
+}
+.btn:hover::after {
+transform: scaleX(1.4) scaleY(1.6);
+opacity: 0;
+}
+.btn-animated {
+animation: moveInBottom 5s ease-out;
+animation-fill-mode: backwards;
+}
+@keyframes moveInBottom {
+0% {
+    opacity: 0;
+    transform: translateY(30px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+
 #contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 700px;
+    height: 800px;
     background: linear-gradient(to bottom right, rgb(12, 12, 87), rgb(255, 179, 0));
 }
 
@@ -247,9 +461,13 @@ p {
     padding-left: 10px;
 }
 
-#message {
+.message {
+    width: 459px;
+}
+
+textarea.form-style {
     min-height: 10rem;
-    width: 360px;
+    width: 469px;
     padding: 10px;
 }
 
@@ -270,11 +488,16 @@ label {
     color: beige;
 }
 
-#send-btn {
+.send-btn {
     cursor: pointer;
     border-radius: 10px;
     padding: 7px;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     margin-top: 10px;
-    margin-left: 5px;
+}
+
+#send-btn:hover {
+    background-color: rgb(225 213 254 / 45%);
+    color: #000000;
+    border-color: rgb(225 213 254 / 45%);
 }
